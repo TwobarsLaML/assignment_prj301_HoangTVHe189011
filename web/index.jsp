@@ -43,6 +43,7 @@
             </div>
         </nav>
                 <h3 class="text-danger text-center">${mes}</h3>
+                <c:remove scope="session" var="mes"/>
         <section class="py-1">
             <div class="container px-2 px-lg-2 mt-5">
                 <h2 class="text-center bg-light ">All Items</h2>

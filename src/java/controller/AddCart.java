@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import model.Cart;
 
@@ -22,7 +23,7 @@ public class AddCart extends HttpServlet {
     throws ServletException, IOException {
         
         CartDAO cdao = new CartDAO();
-        PrintWriter out = response.getWriter();
+        HttpSession session = request.getSession();
         String username = request.getParameter("username");
         String item_id_raw = request.getParameter("item_id");
 //        String quantity_raw = request.getParameter("quantity");
@@ -33,8 +34,8 @@ public class AddCart extends HttpServlet {
             c.setItemId(item_id);
             c.setQuantity(1);
             cdao.addCart(c);
-            request.setAttribute("mes", "Succesfully add the item");
-            request.getRequestDispatcher("display").forward(request, response);
+            session.setAttribute("mes", "Succesfully add the item");
+            response.sendRedirect("display");
         } catch (NumberFormatException e) {
             System.out.println("hehehe");
         }

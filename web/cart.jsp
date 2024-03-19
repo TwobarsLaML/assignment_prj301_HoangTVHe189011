@@ -56,7 +56,7 @@
                 <table class="table table-bordered my-5 mx-auto" style="width:70%">
                     <thead class="thead-light text-center">
                         <tr>
-                            <th scope="col">Item Name</th>
+                            <th scope="col" style="width : 50%">Item Name</th>
                             <th>Unit Price</th>
                             <th>Quantity</th>
                             <th style="width: 15%">Price</th>

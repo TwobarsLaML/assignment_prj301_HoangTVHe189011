@@ -24,9 +24,7 @@ public class DisplayItems extends HttpServlet {
         String message = request.getParameter("mes");
         ItemDAO idao = new ItemDAO();
         List<Item> list = idao.getAll();
-        if(message != null) {
-            request.setAttribute("mes", message);
-        }
+        
         request.setAttribute("iList", list);
         request.getRequestDispatcher("index.jsp").forward(request, response);
     } 
