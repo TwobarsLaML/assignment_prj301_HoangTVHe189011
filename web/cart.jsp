@@ -69,8 +69,7 @@
                         <tr style="text-align: center">
                             <td>${c.item.name}</td>
                             <td>
-                                <fmt:formatNumber maxFractionDigits="2" groupingUsed = "false" 
-                                                  value="${c.item.price}"/>
+                                $${c.item.price}
                             </td>
                             <td style="text-align: center">
                                 <c:set var="number" value="${c.quantity}"/>
@@ -85,7 +84,7 @@
                                 <a href="increase?cart_id=${c.id}" class="btn btn-secondary btn-sm" role="button">+</a>
                             </td>
                             <td>
-                                <fmt:formatNumber maxFractionDigits="2" groupingUsed = "false" 
+                                $<fmt:formatNumber maxFractionDigits="2" groupingUsed = "false" 
                                                   value="${(c.item.price*number)}"/>
                                 <c:set var="sum" value="${sum + (c.item.price*number)}"/>
                             </td>

@@ -13,7 +13,10 @@ CREATE TABLE Items(
 INSERT INTO Items VALUES 
 ('handbag.jpg','Prada', 2399.99, 'Luxury'),
 ('necklace.jpg', 'Personalized Name Necklace | Diamond Name Necklace', 999.99, 'Personal'),
-('headband.jpg', 'Effortless Scarf Headband | Handmade | Chiffon', 49.99, 'Handmade')
+('headband.jpg', 'Effortless Scarf Headband | Handmade | Chiffon', 49.99, 'Handmade'),
+('earring.jpg','Boho Polymer Clay Leaf Dangle Earrings | Handmade Chiffon, Black, and Camel Colored Leaf Earrings ', 19.99, 'Handmade'),
+('bracelet.jpg', 'Louise Bracelet', 129.99, 'Luxury'),
+('bracelet2.jpg', 'Personalized Gold Pavé Name Bracelet', 45.99, 'Personal')
 
 Create TABLE Accounts(
 username NVARCHAR(20) PRIMARY KEY,
